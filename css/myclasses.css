@@ -206,6 +206,23 @@ a.yt:hover{
     }
  }
 
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 768px) {
+    .booksection{
+        min-width: 162px;
+    }
+    .booksectionimg{
+        height: 220px;
+    }
+    #spotlightimg {
+        max-height: 300px;
+        max-width: 200px;
+    }
+    .empty{
+        min-height: 30px;
+    }
+ }
+
 #spotlightimg:hover {
     transition: 2s all;
     -webkit-mask-position: 120%;
