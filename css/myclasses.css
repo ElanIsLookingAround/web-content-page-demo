@@ -177,9 +177,9 @@ a.yt:hover{
 }
 
 #spotlightimg {
+    min-height: 300px;
     max-height: 400px;
     max-width: 300px;
-
     -webkit-mask-image: linear-gradient(45deg,#000 25%,rgba(0,0,0,0.2) 50%,#000 75%);
     mask-image: linear-gradient(45deg,#000 25%,rgba(0,0,0,0.2) 50%,#000 75%);
     -webkit-mask-size: 800%;
@@ -199,23 +199,7 @@ a.yt:hover{
     }
     #spotlightimg {
         max-height: 300px;
-        max-width: 200px;
-    }
-    .empty{
-        min-height: 30px;
-    }
- }
-
-/* Small devices (landscape phones, 576px and up) */
-@media screen and (min-width: 768px) {
-    .booksection{
-        min-width: 162px;
-    }
-    .booksectionimg{
-        height: 220px;
-    }
-    #spotlightimg {
-        max-height: 300px;
+        min-height: 200px;
         max-width: 200px;
     }
     .empty{
