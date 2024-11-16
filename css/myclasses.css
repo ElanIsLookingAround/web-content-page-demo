@@ -176,7 +176,7 @@ a.yt:hover{
     opacity: 1;
 }
 
-#spotlightimg {
+.spotlightimg {
     min-height: 300px;
     max-height: 400px;
     max-width: 300px;
@@ -197,7 +197,7 @@ a.yt:hover{
     .booksectionimg{
         height: 220px;
     }
-    #spotlightimg {
+    .spotlightimg {
         max-height: 300px;
         min-height: 200px;
         max-width: 200px;
@@ -207,7 +207,7 @@ a.yt:hover{
     }
  }
 
-#spotlightimg:hover {
+.spotlightimg:hover {
     transition: 2s all;
     -webkit-mask-position: 120%;
     mask-position: 120%;
