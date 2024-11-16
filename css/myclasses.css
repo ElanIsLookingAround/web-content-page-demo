@@ -10,9 +10,9 @@
     animation-fill-mode: forwards;
     border: solid 4px white;
     border-radius: 0px 12px 12px 0px;
-    min-width: 204px;
-    min-height: 300px;
     transition: 0.3s all;
+    min-width: 204px;
+
 }
 .booksectiontitle{
     text-overflow: ellipsis;
@@ -22,8 +22,8 @@
 
 .booksectionimg{
     object-fit: cover;
-    height: 300px;
     width: 100%;
+    height: 300px;
     border-radius: 0px 12px 12px 0px;
 }
 
@@ -55,6 +55,7 @@
     width: 100%;
     border-radius: 0px 12px 12px 0px;
 }
+
 .seriessectiontitle{
     text-overflow: ellipsis;
     overflow: hidden;
@@ -83,7 +84,7 @@ a.yt:hover{
     transition: 0.3s all;
 }
 .boxshadow{
-    box-shadow: 0px 0px 10px rgba(185, 185, 185, 0.603);
+    box-shadow: 0px 0px 10px rgba(185, 185, 185, 0.800);
 }
 
 .playfair{
@@ -176,6 +177,9 @@ a.yt:hover{
 }
 
 #spotlightimg {
+    max-height: 400px;
+    max-width: 300px;
+
     -webkit-mask-image: linear-gradient(45deg,#000 25%,rgba(0,0,0,0.2) 50%,#000 75%);
     mask-image: linear-gradient(45deg,#000 25%,rgba(0,0,0,0.2) 50%,#000 75%);
     -webkit-mask-size: 800%;
@@ -184,6 +188,23 @@ a.yt:hover{
     mask-position: 0;
     border-radius: 0px 12px 12px 0px;
 }
+
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (max-width: 768px) {
+    .booksection{
+        min-width: 162px;
+    }
+    .booksectionimg{
+        height: 220px;
+    }
+    #spotlightimg {
+        max-height: 300px;
+        max-width: 200px;
+    }
+    .empty{
+        min-height: 30px;
+    }
+ }
 
 #spotlightimg:hover {
     transition: 2s all;
