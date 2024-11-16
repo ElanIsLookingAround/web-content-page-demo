@@ -1,0 +1,153 @@
+ <!--
+ * Created on Sat November 16 2024
+ *
+ * Written by Allen  
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brandon Sanderson Compendium</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/myclasses.css" rel="stylesheet" />
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/bookquery.js" defer></script>
+  <script src="js/tilt.jquery.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,800;1,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+
+<body>
+
+
+  <nav id="nav" class="container-fluid py-3 sticky-top" style="background:white;" id="navbar">
+    <div class="row w-100 m-0">
+        <div class="col-lg-4 col-md-5 col-sm-12 sticky-top align-items-center text-md-start text-center h-100 justify-content-center">
+            <h2 class="playfair fontlogo">The Brandon Sanderson Compendium</h2>
+        </div>
+        <div class="col-md-1 d-none sticky-top d-md-flex align-items-center justify-content-center">
+            <a class='m-auto'href="https://www.brandonsanderson.com/blogs/blog">Blog</a>
+        </div>
+        <div class="col-md-1 d-none d-md-flex align-items-center justify-content-center">
+            <a href="https://x.com/BrandSanderson"><i class="bi bi-twitter-x"></i></a>
+        </div>
+        <div class="col-md-4 col-lg-5 d-none d-md-flex"></div>
+        <div class="col-md-1 d-none d-md-flex align-items-center justify-content-center">
+            <a class="opacity-50" href="https://x.com/BrandSanderson">Designed by Allen</a>
+        </div>
+    </div>
+  </nav>
+
+  <!-- <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <div style="height: 9000px;"></div> -->
+ 
+    <div class="container">
+        <div class="text-center">
+            <p class="fontreg fadeIn pt-5">
+                Brandon Winn Sanderson is an American, New York Times best-selling author of high fantasy, science fiction, and young adult books. He is best known for the Cosmere fictional universe, in which most of his fantasy novels, most notably the Mistborn series and The Stormlight Archive, are set.
+            </p>
+        </div>
+
+        <div class="empty"></div>
+
+        <h4 class="playfair mt-1 mb-4">Book Spotlight</h4>
+        <div class="row justify-content-around align-items-center">
+            <div class="col-md-4 d-flex align-items-center justify-content-sm-center justify-content-md-start mt-md-0 mt-3" >
+                <img id="spotlightimg" class="m-auto" style="max-height: 400px;max-width: 300px;" src=""/>
+            </div>
+            <div class="col-md-8 flex-grow-1 d-flex flex-column text-md-start text-center mt-md-0 mt-3" style="max-width: 900px; min-height: 400px;max-height: 400px;">
+                <h3 id="spotlightitle" class="playfair"></h3>
+                <p class='flex-grow-1 overflow-scroll' style="scrollbar-width: none;" id="spotlightdesc"></p>
+            </div>
+        </div>
+
+        <h4 class="playfair mt-md-5 mt-3" >Popular Books</h4>
+        <div class="position-relative scrollcontainer " >
+            <div class="d-flex flex-row overflow-y-scroll position-relative scrollbox" style="scrollbar-width: none;" id="popular"></div>
+
+            <button class="position-absolute start-0 scrollbutton scrollbutton-left btn btn-dark d-flex justify-content-center align-items-center"><i class="bi bi-chevron-left"></i></button>
+            <button class="position-absolute end-0 scrollbutton scrollbutton-right btn btn-dark d-flex justify-content-center align-items-center"><i class="bi bi-chevron-right"></i></button>
+        </div>
+
+        <div class="empty"></div>
+
+        <p class="fontreg m-0 p-0" >Can't decide what series to read first? Try</p>
+        <h4 class="fw-bold playfair" id="random"></h4>
+        <div class="position-relative scrollcontainer" >
+            <div class="d-flex flex-row overflow-y-scroll position-relative scrollbox" id="randombox" style="scrollbar-width: none;"></div>
+
+            <button class="position-absolute start-0 scrollbutton scrollbutton-left btn btn-dark d-flex justify-content-center align-items-center"><i class="bi bi-chevron-left"></i></button>
+            <button class="position-absolute end-0 scrollbutton scrollbutton-right btn btn-dark d-flex justify-content-center align-items-center"><i class="bi bi-chevron-right"></i></button>
+        </div>
+
+        <div class="empty"></div>
+
+        <h4 class="fw-bold playfair ">Series</h4>
+        <p class="fontreg">All of Brandon Sanderson's book series.</p>
+        <div class="row justify-content-around"  id='seriescontainer' style="scrollbar-width: none;width: 100%;">
+        </div>
+
+        <div class="empty"></div>
+
+    </div>
+
+
+  <div class="container d-flex flex-column" >
+       <hr class="border border-secondary border-1 opacity-25">
+       <div class="col-sm-12 empty"></div>
+        <div class="row align-items-center justify-content-center">
+            <div class="col-sm-12 row align-items-center justify-content-around">
+                <div class="d-none d-md-block col-md-3"></div>
+                <div class="col-md-2 justify-content-center align-items-center text-center">
+                    <a href="https://www.brandonsanderson.com/blogs/blog">Blog</a>
+                </div>
+                <div class="col-md-2 justify-content-center align-items-center text-center">
+                    <a href="https://x.com/BrandSanderson"><i class="bi bi-twitter-x"></i></a>
+                </div>
+                <div class="col-md-2 justify-content-center align-items-center text-center">
+                    <a href="https://www.youtube.com/@BrandSanderson"><i class="bi bi-youtube"></i></a>
+                </div>
+                <div class="d-none d-md-block col-md-3"></div>
+            </div>
+            <div class="col-sm-12 empty"></div>
+            <div class="col-sm-12 text-center">
+                <p>This web page is coded and designed by Allen. Special thanks goes to Gijs Rogé for Tilt.js (image tilt effect).</p>
+            </div>
+        </div>
+  </div>
+
+</body>
+
+
+</html>
